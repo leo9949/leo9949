@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Daily Conversation Phrases - Page 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 100%;
+        }
+        .phrase {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .english {
+            width: 45%;
+            text-align: right;
+            visibility: visible;
+        }
+        .chinese {
+            width: 45%;
+            text-align: left;
+            cursor: pointer;
+            visibility: visible;
+        }
+        .buttons {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .hidden {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <button onclick="toggleAllEnglish()">Hide/Unhide English</button>
+        <button onclick="toggleAllPinyin()">Hide/Unhide Pinyin</button>
+    </div>
+
+    <div id="phrases">
+        <div class="phrase">
+            <div class="english">Do you have any siblings?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">你有兄弟姐妹吗 <span class="pinyin hidden">(nǐ yǒu xiōngdì jiěmèi ma)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I have a brother</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我有一个哥哥 <span class="pinyin hidden">(wǒ yǒu yī gè gēge)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I have a sister</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我有一个姐姐 <span class="pinyin hidden">(wǒ yǒu yī gè jiějie)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I don't have any siblings</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我没有兄弟姐妹 <span class="pinyin hidden">(wǒ méiyǒu xiōngdì jiěmèi)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">What is your job?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">你是做什么工作的 <span class="pinyin hidden">(nǐ shì zuò shénme gōngzuò de)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I am a student</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我是学生 <span class="pinyin hidden">(wǒ shì xuéshēng)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I am a teacher</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我是老师 <span class="pinyin hidden">(wǒ shì lǎoshī)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I work in an office</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我在办公室工作 <span class="pinyin hidden">(wǒ zài bàngōngshì gōngzuò)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I am a doctor</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我是医生 <span class="pinyin hidden">(wǒ shì yīshēng)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I am a lawyer</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我是律师 <span class="pinyin hidden">(wǒ shì lǜshī)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">Do you like your job?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">你喜欢你的工作吗 <span class="pinyin hidden">(nǐ xǐhuān nǐ de gōngzuò ma)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I love my job</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我爱我的工作 <span class="pinyin hidden">(wǒ ài wǒ de gōngzuò)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I don't like my job</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我不喜欢我的工作 <span class="pinyin hidden">(wǒ bù xǐhuān wǒ de gōngzuò)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">What are your hobbies?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">你的爱好是什么 <span class="pinyin hidden">(nǐ de àihào shì shénme)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I like reading</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我喜欢读书 <span class="pinyin hidden">(wǒ xǐhuān dúshū)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I like traveling</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我喜欢旅游 <span class="pinyin hidden">(wǒ xǐhuān lǚyóu)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I like playing sports</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我喜欢运动 <span class="pinyin hidden">(wǒ xǐhuān yùndòng)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">What is your favorite food?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">你最喜欢的食物是什么 <span class="pinyin hidden">(nǐ zuì xǐhuān de shíwù shì shénme)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I love Chinese food</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我爱中国菜 <span class="pinyin hidden">(wǒ ài zhōngguó cài)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I like pizza</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我喜欢披萨 <span class="pinyin hidden">(wǒ xǐhuān pīsà)</span></div>
+        </div>
+    </div>
+
+    <div class="pagination">
+        <a href="page1.html">1</a>
+        <a href="page2.html">2</a>
+        <a href="page3.html">3</a>
+        <a href="page4.html">4</a>
+        <!-- Add links for subsequent pages -->
+    </div>
+
+    <script>
+        let englishHidden = false;
+        let pinyinHidden = true;
+
+        function toggleAllEnglish() {
+            const englishPhrases = document.querySelectorAll('.english');
+            englishPhrases.forEach(phrase => {
+                phrase.style.visibility = englishHidden ? 'visible' : 'hidden';
+            });
+            englishHidden = !englishHidden;
+        }
+
+        function toggleAllPinyin() {
+            const pinyinParts = document.querySelectorAll('.pinyin');
+            pinyinParts.forEach(part => {
+                part.style.visibility = pinyinHidden ? 'visible' : 'hidden';
+            });
+            pinyinHidden = !pinyinHidden;
+        }
+
+        function toggleLinePinyin(element) {
+            const pinyinPart = element.querySelector('.pinyin');
+            if (pinyinPart) {
+                pinyinPart.classList.toggle('hidden');
+            }
+        }
+    </script>
+</body>
+</html>

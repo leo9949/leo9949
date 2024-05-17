@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Daily Conversation Phrases - Page 4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 100%;
+        }
+        .phrase {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .english {
+            width: 45%;
+            text-align: right;
+            visibility: visible;
+        }
+        .chinese {
+            width: 45%;
+            text-align: left;
+            cursor: pointer;
+            visibility: visible;
+        }
+        .buttons {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .hidden {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <button onclick="toggleAllEnglish()">Hide/Unhide English</button>
+        <button onclick="toggleAllPinyin()">Hide/Unhide Pinyin</button>
+    </div>
+
+    <div id="phrases">
+        <div class="phrase">
+            <div class="english">Where do you live?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">你住在哪里 <span class="pinyin hidden">(nǐ zhù zài nǎlǐ)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I live in the city</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我住在城市 <span class="pinyin hidden">(wǒ zhù zài chéngshì)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I live in the countryside</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我住在乡下 <span class="pinyin hidden">(wǒ zhù zài xiāngxià)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">How old are you?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">你多大了 <span class="pinyin hidden">(nǐ duō dà le)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I am 25 years old</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我25岁 <span class="pinyin hidden">(wǒ èrshíwǔ suì)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">What is your phone number?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">你的电话号码是多少 <span class="pinyin hidden">(nǐ de diànhuà hàomǎ shì duōshǎo)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">My phone number is...</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我的电话号码是... <span class="pinyin hidden">(wǒ de diànhuà hàomǎ shì...)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">What is your email address?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">你的电子邮件地址是什么 <span class="pinyin hidden">(nǐ de diànzǐ yóujiàn dìzhǐ shì shénme)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">My email address is...</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我的电子邮件地址是... <span class="pinyin hidden">(wǒ de diànzǐ yóujiàn dìzhǐ shì...)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">Do you have a WeChat account?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">你有微信吗 <span class="pinyin hidden">(nǐ yǒu wēixìn ma)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">Yes, I have a WeChat account</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">是的，我有微信 <span class="pinyin hidden">(shì de, wǒ yǒu wēixìn)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">No, I don't have a WeChat account</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">不，我没有微信 <span class="pinyin hidden">(bù, wǒ méiyǒu wēixìn)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">Can you add me on WeChat?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">你能加我微信吗 <span class="pinyin hidden">(nǐ néng jiā wǒ wēixìn ma)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">What is your WeChat ID?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">你的微信号是什么 <span class="pinyin hidden">(nǐ de wēixìn hào shì shénme)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">My WeChat ID is...</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我的微信号是... <span class="pinyin hidden">(wǒ de wēixìn hào shì...)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">Do you use any other social media?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">你用其他社交媒体吗 <span class="pinyin hidden">(nǐ yòng qítā shèjiāo méitǐ ma)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">Yes, I use...</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">是的，我用... <span class="pinyin hidden">(shì de, wǒ yòng...)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">No, I don't use social media</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">不，我不用社交媒体 <span class="pinyin hidden">(bù, wǒ bù yòng shèjiāo méitǐ)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">Can you send me an email?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">你能给我发电子邮件吗 <span class="pinyin hidden">(nǐ néng gěi wǒ fā diànzǐ yóujiàn ma)</span></div>
+        </div>
+    </div>
+
+    <div class="pagination">
+        <a href="page1.html">1</a>
+        <a href="page2.html">2</a>
+        <a href="page3.html">3</a>
+        <a href="page4.html">4</a>
+        <a href="page5.html">5</a>
+        <!-- Add links for subsequent pages -->
+    </div>
+
+    <script>
+        let englishHidden = false;
+        let pinyinHidden = true;
+
+        function toggleAllEnglish() {
+            const englishPhrases = document.querySelectorAll('.english');
+            englishPhrases.forEach(phrase => {
+                phrase.style.visibility = englishHidden ? 'visible' : 'hidden';
+            });
+            englishHidden = !englishHidden;
+        }
+
+        function toggleAllPinyin() {
+            const pinyinParts = document.querySelectorAll('.pinyin');
+            pinyinParts.forEach(part => {
+                part.style.visibility = pinyinHidden ? 'visible' : 'hidden';
+            });
+            pinyinHidden = !pinyinHidden;
+        }
+
+        function toggleLinePinyin(element) {
+            const pinyinPart = element.querySelector('.pinyin');
+            if (pinyinPart) {
+                pinyinPart.classList.toggle('hidden');
+            }
+        }
+    </script>
+</body>
+</html>

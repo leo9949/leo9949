@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Daily Conversation Phrases - Page 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 100%;
+        }
+        .phrase {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .english {
+            width: 45%;
+            text-align: right;
+            visibility: visible;
+        }
+        .chinese {
+            width: 45%;
+            text-align: left;
+            cursor: pointer;
+            visibility: visible;
+        }
+        .buttons {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .hidden {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <button onclick="toggleAllEnglish()">Hide/Unhide English</button>
+        <button onclick="toggleAllPinyin()">Hide/Unhide Pinyin</button>
+    </div>
+
+    <div id="phrases">
+        <div class="phrase">
+            <div class="english">Can you help me?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">你能帮我吗 <span class="pinyin hidden">(nǐ néng bāng wǒ ma)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">Where is the bathroom?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">洗手间在哪里 <span class="pinyin hidden">(xǐshǒujiān zài nǎlǐ)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">How much does this cost?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">这个多少钱 <span class="pinyin hidden">(zhège duōshǎo qián)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I don't understand</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我不懂 <span class="pinyin hidden">(wǒ bù dǒng)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">Could you speak slower?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">你能说慢点吗 <span class="pinyin hidden">(nǐ néng shuō màn diǎn ma)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I'm lost</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我迷路了 <span class="pinyin hidden">(wǒ mílù le)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I'm tired</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我累了 <span class="pinyin hidden">(wǒ lèi le)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I'm hungry</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我饿了 <span class="pinyin hidden">(wǒ è le)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I'm thirsty</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我渴了 <span class="pinyin hidden">(wǒ kě le)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I'm sick</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我生病了 <span class="pinyin hidden">(wǒ shēngbìng le)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I need a doctor</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我需要医生 <span class="pinyin hidden">(wǒ xūyào yīshēng)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">Call the police</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">报警 <span class="pinyin hidden">(bàojǐng)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I need help</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我需要帮助 <span class="pinyin hidden">(wǒ xūyào bāngzhù)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I'm sorry, I don't speak Chinese</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">对不起，我不会说中文 <span class="pinyin hidden">(duìbuqǐ, wǒ bù huì shuō zhōngwén)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">Can you translate for me?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">你能为我翻译吗 <span class="pinyin hidden">(nǐ néng wèi wǒ fānyì ma)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">What time is it?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">现在几点 <span class="pinyin hidden">(xiànzài jǐ diǎn)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">Where are you from?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">你来自哪里 <span class="pinyin hidden">(nǐ láizì nǎlǐ)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I'm from...</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我来自... <span class="pinyin hidden">(wǒ láizì...)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I live in...</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我住在... <span class="pinyin hidden">(wǒ zhù zài...)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">How long have you been here?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">你在这里多久了 <span class="pinyin hidden">(nǐ zài zhèlǐ duōjiǔ le)</span></div>
+        </div>
+    </div>
+
+    <div class="pagination">
+        <a href="page1.html">1</a>
+        <a href="page2.html">2</a>
+        <a href="page3.html">3</a>
+        <!-- Add links for subsequent pages -->
+    </div>
+
+    <script>
+        let englishHidden = false;
+        let pinyinHidden = true;
+
+        function toggleAllEnglish() {
+            const englishPhrases = document.querySelectorAll('.english');
+            englishPhrases.forEach(phrase => {
+                phrase.style.visibility = englishHidden ? 'visible' : 'hidden';
+            });
+            englishHidden = !englishHidden;
+        }
+
+        function toggleAllPinyin() {
+            const pinyinParts = document.querySelectorAll('.pinyin');
+            pinyinParts.forEach(part => {
+                part.style.visibility = pinyinHidden ? 'visible' : 'hidden';
+            });
+            pinyinHidden = !pinyinHidden;
+        }
+
+        function toggleLinePinyin(element) {
+            const pinyinPart = element.querySelector('.pinyin');
+            if (pinyinPart) {
+                pinyinPart.classList.toggle('hidden');
+            }
+        }
+    </script>
+</body>
+</html>

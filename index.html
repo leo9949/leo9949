@@ -129,21 +129,33 @@
         function toggleEnglish() {
             const englishPhrases = document.querySelectorAll('.english');
             englishPhrases.forEach(phrase => {
-                phrase.classList.toggle('hidden');
+                if (phrase.style.display === 'none') {
+                    phrase.style.display = 'block';
+                } else {
+                    phrase.style.display = 'none';
+                }
             });
         }
 
         function togglePinyin() {
             const pinyinParts = document.querySelectorAll('.pinyin');
             pinyinParts.forEach(part => {
-                part.classList.toggle('hidden');
+                if (part.style.display === 'none') {
+                    part.style.display = 'inline';
+                } else {
+                    part.style.display = 'none';
+                }
             });
         }
 
         function toggleLinePinyin(element) {
             const pinyinPart = element.querySelector('.pinyin');
             if (pinyinPart) {
-                pinyinPart.classList.toggle('hidden');
+                if (pinyinPart.style.display === 'none') {
+                    pinyinPart.style.display = 'inline';
+                } else {
+                    pinyinPart.style.display = 'none';
+                }
             }
         }
     </script>

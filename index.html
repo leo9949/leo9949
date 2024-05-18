@@ -1,3 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Daily Conversation Phrases - Example Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 100%;
+        }
+        .phrase {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .english {
+            width: 45%;
+            text-align: left;
+            visibility: visible;
+        }
+        .chinese {
+            width: 45%;
+            text-align: center;
+            cursor: pointer;
+            visibility: visible;
+        }
+        .buttons {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .hidden {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <button onclick="toggleAllEnglish()">Hide/Unhide English</button>
+        <button onclick="toggleAllPinyin()">Hide/Unhide Pinyin</button>
+    </div>
+
+    <div id="phrases">
+        <div class="phrase">
+            <div class="english">Hello</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">你好 <span class="pinyin hidden">(nǐ hǎo)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">Thank you</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">谢谢 <span class="pinyin hidden">(xiè xiè)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">Good morning</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">早上好 <span class="pinyin hidden">(zǎo shàng hǎo)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">Good night</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">晚安 <span class="pinyin hidden">(wǎn ān)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">How are you?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">你好吗 <span class="pinyin hidden">(nǐ hǎo ma)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">I'm fine</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我很好 <span class="pinyin hidden">(wǒ hěn hǎo)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">What is your name?</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">你叫什么名字 <span class="pinyin hidden">(nǐ jiào shénme míngzi)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">My name is...</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">我的名字是 <span class="pinyin hidden">(wǒ de míngzi shì)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">Nice to meet you</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">很高兴认识你 <span class="pinyin hidden">(hěn gāoxìng rènshí nǐ)</span></div>
+        </div>
+        <div class="phrase">
+            <div class="english">Goodbye</div>
+            <div class="chinese" onclick="toggleLinePinyin(this)">再见 <span class="pinyin hidden">(zài jiàn)</span></div>
+        </div>
         <div class="phrase">
             <div class="english">Please</div>
             <div class="chinese" onclick="toggleLinePinyin(this)">请 <span class="pinyin hidden">(qǐng)</span></div>
@@ -151,6 +239,7 @@
             const pinyinParts = document.querySelectorAll('.pinyin');
             pinyinParts.forEach(part => {
                 part.style.visibility = pinyinHidden ? 'visible' : 'hidden';
+                part.classList.toggle('hidden', pinyinHidden);
             });
             pinyinHidden = !pinyinHidden;
         }

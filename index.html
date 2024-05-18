@@ -3,51 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chinese Daily Conversation Phrases - Example Page</title>
+    <title>Chinese Daily Conversation Phrases - Page 1</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            max-width: 100%;
-        }
-        .phrase {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-        .english {
-            width: 45%;
-            text-align: left;
-        }
-        .chinese-wrapper {
-            width: 45%;
-            text-align: left;
-        }
-        .chinese {
-            display: inline-block;
-            text-align: center;
-        }
-        .pinyin {
-            display: inline-block;
-        }
-        .buttons {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .pagination {
-            text-align: center;
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .pagination button,
-        .pagination select {
-            margin: 0 10px;
-        }
-        .hidden {
-            visibility: hidden;
-        }
+        body { font-family: Arial, sans-serif; margin: 20px; max-width: 100%; }
+        .phrase { display: flex; justify-content: space-between; margin-bottom: 10px; }
+        .english { width: 45%; text-align: left; }
+        .chinese-wrapper { width: 45%; text-align: left; }
+        .chinese { display: inline-block; text-align: center; }
+        .pinyin { display: inline-block; }
+        .buttons { margin-bottom: 20px; text-align: center; }
+        .pagination { text-align: center; margin-top: 20px; display: flex; justify-content: center; align-items: center; }
+        .pagination button, .pagination select { margin: 0 10px; }
+        .hidden { visibility: hidden; }
     </style>
 </head>
 <body>
@@ -87,12 +54,96 @@
                 <div class="chinese">你好吗 <span class="pinyin hidden">(nǐ hǎo ma)</span></div>
             </div>
         </div>
+        <div class="phrase">
+            <div class="english">I'm fine</div>
+            <div class="chinese-wrapper" onclick="toggleLinePinyin(this)">
+                <div class="chinese">我很好 <span class="pinyin hidden">(wǒ hěn hǎo)</span></div>
+            </div>
+        </div>
+        <div class="phrase">
+            <div class="english">What is your name?</div>
+            <div class="chinese-wrapper" onclick="toggleLinePinyin(this)">
+                <div class="chinese">你叫什么名字 <span class="pinyin hidden">(nǐ jiào shénme míngzi)</span></div>
+            </div>
+        </div>
+        <div class="phrase">
+            <div class="english">My name is...</div>
+            <div class="chinese-wrapper" onclick="toggleLinePinyin(this)">
+                <div class="chinese">我的名字是 <span class="pinyin hidden">(wǒ de míngzi shì)</span></div>
+            </div>
+        </div>
+        <div class="phrase">
+            <div class="english">Nice to meet you</div>
+            <div class="chinese-wrapper" onclick="toggleLinePinyin(this)">
+                <div class="chinese">很高兴认识你 <span class="pinyin hidden">(hěn gāoxìng rènshí nǐ)</span></div>
+            </div>
+        </div>
+        <div class="phrase">
+            <div class="english">Goodbye</div>
+            <div class="chinese-wrapper" onclick="toggleLinePinyin(this)">
+                <div class="chinese">再见 <span class="pinyin hidden">(zài jiàn)</span></div>
+            </div>
+        </div>
+        <div class="phrase">
+            <div class="english">Please</div>
+            <div class="chinese-wrapper" onclick="toggleLinePinyin(this)">
+                <div class="chinese">请 <span class="pinyin hidden">(qǐng)</span></div>
+            </div>
+        </div>
+        <div class="phrase">
+            <div class="english">Excuse me</div>
+            <div class="chinese-wrapper" onclick="toggleLinePinyin(this)">
+                <div class="chinese">对不起 <span class="pinyin hidden">(duìbuqǐ)</span></div>
+            </div>
+        </div>
+        <div class="phrase">
+            <div class="english">I'm sorry</div>
+            <div class="chinese-wrapper" onclick="toggleLinePinyin(this)">
+                <div class="chinese">对不起 <span class="pinyin hidden">(duìbuqǐ)</span></div>
+            </div>
+        </div>
+        <div class="phrase">
+            <div class="english">Yes</div>
+            <div class="chinese-wrapper" onclick="toggleLinePinyin(this)">
+                <div class="chinese">是 <span class="pinyin hidden">(shì)</span></div>
+            </div>
+        </div>
+        <div class="phrase">
+            <div class="english">No</div>
+            <div class="chinese-wrapper" onclick="toggleLinePinyin(this)">
+                <div class="chinese">不是 <span class="pinyin hidden">(bù shì)</span></div>
+            </div>
+        </div>
+        <div class="phrase">
+            <div class="english">Maybe</div>
+            <div class="chinese-wrapper" onclick="toggleLinePinyin(this)">
+                <div class="chinese">可能 <span class="pinyin hidden">(kěnéng)</span></div>
+            </div>
+        </div>
+        <div class="phrase">
+            <div class="english">I don't know</div>
+            <div class="chinese-wrapper" onclick="toggleLinePinyin(this)">
+                <div class="chinese">我不知道 <span class="pinyin hidden">(wǒ bù zhīdào)</span></div>
+            </div>
+        </div>
+        <div class="phrase">
+            <div class="english">Do you speak English?</div>
+            <div class="chinese-wrapper" onclick="toggleLinePinyin(this)">
+                <div class="chinese">你会说英语吗 <span class="pinyin hidden">(nǐ huì shuō yīngyǔ)</span></div>
+            </div>
+        </div>
+        <div class="phrase">
+            <div class="english">I love you</div>
+            <div class="chinese-wrapper" onclick="toggleLinePinyin(this)">
+                <div class="chinese">我爱你 <span class="pinyin hidden">(wǒ ài nǐ)</span></div>
+            </div>
+        </div>
     </div>
 
     <div class="pagination">
         <button onclick="prevPage()">Previous</button>
         <select id="pageSelect" onchange="goToPage(this.value)">
-            <option value="page1.html">1</option>
+            <option value="page1.html" selected>1</option>
             <option value="page2.html">2</option>
             <option value="page3.html">3</option>
         </select>

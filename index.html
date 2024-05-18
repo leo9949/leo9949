@@ -22,7 +22,7 @@
         }
         .chinese {
             width: 45%;
-            text-align: center;
+            text-align: right;
             cursor: pointer;
             visibility: visible;
         }
@@ -239,7 +239,6 @@
             const pinyinParts = document.querySelectorAll('.pinyin');
             pinyinParts.forEach(part => {
                 part.style.visibility = pinyinHidden ? 'visible' : 'hidden';
-                part.classList.toggle('hidden', pinyinHidden);
             });
             pinyinHidden = !pinyinHidden;
         }

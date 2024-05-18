@@ -143,9 +143,8 @@
     <div class="pagination">
         <button onclick="prevPage()">Previous</button>
         <select id="pageSelect" onchange="goToPage(this.value)">
-            <option value="page1.html" selected>1</option>
-            <option value="page2.html">2</option>
-            <option value="page3.html">3</option>
+            <!-- Dropdown menu with 250 pages -->
+            {''.join([f'<option value="page{i}.html">Page {i}</option>' for i in range(1, 251)])}
         </select>
         <button onclick="nextPage()">Next</button>
     </div>
